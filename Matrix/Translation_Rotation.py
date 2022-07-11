@@ -6,12 +6,12 @@ def Translation_Rotation(angle, translation, point1, point2):
                [np.sin(angle), np.cos(angle), translation[1]],
                [0, 0, 1]]
     point1 = point1 + [1]
-    point1 = np.array(point1)
+    point1 = np.array(point1).reshape(3, -1)
     point2 = point2 + [1]
-    point2 = np.array(point2)
-    point3 = np.dot(point1, HMatrix)
-    point4 = np.dot(point2, HMatrix)
-    return point3, point4
+    point2 = np.array(point2).reshape(3, -1)
+    point3 = np.dot(HMatrix, point1)
+    point4 = np.dot(HMatrix, point2)
+    return point3, point4           # Matrix AB =! BA
 Pre_point1 = input("Your first point is: ")
 Pre_point1 = Pre_point1.split(",")
 Pre_point1 = [float(j) for j in Pre_point1]
