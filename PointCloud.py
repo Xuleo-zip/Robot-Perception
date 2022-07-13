@@ -11,7 +11,7 @@ file_list = sorted(os.listdir(path))
 i = 0
 x_final, y_final, z_final = np.array([]), np.array([]), np.array([])
 for file in file_list:
-    if i == len(file_list):
+    if i == len(file_list): # It shoud not be 48+, otherwise get error
         continue
     lpoints = np.fromfile('/~/lidar/%s' % file, dtype=np.float32)
     lpoints = lpoints.reshape(-1, 4)[:, :3]
