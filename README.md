@@ -9,3 +9,5 @@ Here is what robot perception will show by using the point clouds.
 Furthermore, we will also plot points in robots view, so that they can bypass obstacles.
 
 In reality, we have x, y and z three dimensions. Whereas in robot vision, only 2D (u and v they can see) and for the z can be expressed as depth of their vision.
+
+Here is diagram to display the point clouds and depth in robots view.
